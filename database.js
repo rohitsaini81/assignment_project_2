@@ -214,10 +214,10 @@ class STOCK_LISTS {
                 [
                     {
                         id: 0,
-                        name: "Loose Fit Hoodie",
+                        name: "Red Hoddie",
                         description: "Hoodie in midweight sweatshirt fabric made from a cotton blend with a soft brushed inside. ",
                         price: 10.00,
-                        image: "https://source.unsplash.com/1600x1000/?hoodies",
+                        image: "http://127.0.0.1:3000/assets/hoddies/redhoddie.jpg",
                         category: "01",
                         stock: 10,
                         rating: 4,
@@ -228,10 +228,10 @@ class STOCK_LISTS {
                     },
                     {
                         id: 2,
-                        name: "Loose Fit Hoodie",
+                        name: "Black hoddie",
                         description: "Hoodie in midweight sweatshirt fabric made from a cotton blend with a soft brushed inside. ",
                         price: 10.00,
-                        image: "https://source.unsplash.com/1600x1000/?hoodies",
+                        image: "http://127.0.0.1:3000/assets/hoddies/blackhoddie.jpg",
                         category: "01",
                         stock: 10,
                         rating: 4,
@@ -239,12 +239,13 @@ class STOCK_LISTS {
                         colors: ["red", "blue", "green"],
                         sizes: ["small", "medium", "large"]
 
-                    }, {
+                    },
+                     {
                         id: 3,
-                        name: "Loose Fit Hoodie",
+                        name: "Gray Fit Hoodie",
                         description: "Hoodie in midweight sweatshirt fabric made from a cotton blend with a soft brushed inside. ",
                         price: 10.00,
-                        image: "https://source.unsplash.com/1600x1000/?hoodies",
+                        image: "http://127.0.0.1:3000/assets/hoddies/grayhoddie.jpg",
                         category: "01",
                         stock: 10,
                         rating: 4,
@@ -260,25 +261,25 @@ class STOCK_LISTS {
                 {
                     id: 1,
                     stock: 25,
-                    productname: "Loose Fit Hoodie5",
+                    productname: "Red Hoddie",
                     description: "Hoodie in midweight sweatshirt",
                     price: 19.9,
-                    image: "https://source.unsplash.com/1600x1000/?hoodies",
+                    image: "http://127.0.0.1:3000/assets/hoddies/redhoddie.jpg",
                 },
                 {
                     id: 2,
                     stock: 25,
-                    productname: "Loose Fit Hoodie5",
+                    productname: "Black hoddie",
                     description: "Hoodie in midweight sweatshirt",
                     price: 19.9,
-                    image: "https://source.unsplash.com/1600x1000/?hoodies",
+                    image: "http://127.0.0.1:3000/assets/hoddies/blackhoddie.jpg",
                 }, {
                     id: 3,
                     stock: 25,
-                    productname: "Loose Fit Hoodie5",
+                    productname: "Gray Fit Hoodie",
                     description: "Hoodie in midweight sweatshirt",
                     price: 19.9,
-                    image: "https://source.unsplash.com/1600x1000/?hoodies",
+                    image: "http://127.0.0.1:3000/assets/hoddies/grayhoddie.jpg",
                 },
             ]
         }
@@ -288,10 +289,10 @@ class STOCK_LISTS {
                 [
                     {
                         id: 1,
-                        name: "Naruto: Split Sneakers",
+                        name: "Blue Knit Sneakers",
                         description: "This product is eligible for return or exchange under our 30-day return or exchange policy. No questions asked. ",
                         price: 10.00,
-                        image: "https://source.unsplash.com/1600x1000/?footwear",
+                        image: "http://127.0.0.1:3000/assets/shoes/blue-knit-sneaker.webp",
                         category: "01",
                         stock: 10,
                         rating: 4,
@@ -301,10 +302,10 @@ class STOCK_LISTS {
 
                       },{
                         id: 2,
-                        name: "Naruto: Split Sneakers",
+                        name: "Red Football Sneakers",
                         description: "This product is eligible for return or exchange under our 30-day return or exchange policy. No questions asked. ",
                         price: 10.00,
-                        image: "https://source.unsplash.com/1600x1000/?footwear",
+                        image: "http://127.0.0.1:3000/assets/shoes/redfootball.webp",
                         category: "01",
                         stock: 10,
                         rating: 4,
@@ -314,10 +315,10 @@ class STOCK_LISTS {
 
                       },{
                         id: 3,
-                        name: "Naruto: Split Sneakers",
+                        name: "White: Sneakers",
                         description: "This product is eligible for return or exchange under our 30-day return or exchange policy. No questions asked. ",
                         price: 10.00,
-                        image: "https://source.unsplash.com/1600x1000/?footwear",
+                        image: "http://127.0.0.1:3000/assets/shoes/white-shoes.webp",
                         category: "01",
                         stock: 10,
                         rating: 4,
@@ -332,25 +333,25 @@ class STOCK_LISTS {
                 {
                     id: 1,
                     stock: 25,
-                    productname: "Naruto: Split Sneakers",
+                    productname: "Blue Knit Sneaker",
                     description: "Fancy footwear with a twist! Inspired by real ballet dancers' footwear,",
                     price: 19.9,
-                    image: "https://source.unsplash.com/1600x1000/?shoes",
+                    image: "http://127.0.0.1:3000/assets/shoes/blue-knit-sneaker.webp",
                 },
                 {
                     id: 2,
                     stock: 25,
-                    productname: "Naruto: Split Sneakers",
+                    productname: "Red Football Sneakers",
                     description: "Fancy footwear with a twist! Inspired by real ballet dancers' footwear,",
                     price: 19.9,
-                    image: "https://source.unsplash.com/1600x1000/?footwear",
+                    image: "http://127.0.0.1:3000/assets/shoes/redfootball.webp",
                 },                {
                     id: 3,
                     stock: 25,
-                    productname: "Naruto: Split Sneakers",
+                    productname: "White: Sneaker",
                     description: "Fancy footwear with a twist! Inspired by real ballet dancers' footwear,",
                     price: 19.9,
-                    image: "https://source.unsplash.com/1600x1000/?sleepers",
+                    image: "http://127.0.0.1:3000/assets/shoes/white-shoes.webp",
                 },
                 
 

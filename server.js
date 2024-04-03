@@ -2,16 +2,15 @@ const express = require('express');
 const stocks = require('./database');
 const app = express();
 const cors = require('cors');
+const path = require('path');
 app.use(cors());
 app.use(express.json());
 
 // Serve static files from the "public" directory
 app.use(express.static('public'));
 
-
 app.get('/', (req, res) => {
-    // res.send("Hello World")
-    res.sendFile(__dirname + '/public/index.html');
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 app.get('/database', (req, res) => {
     console.log(req.query)
@@ -44,7 +43,7 @@ app.get('/getstock/', (req, res) => {
             res.json(fstock)
             break;
         case "hoddies":
-            const hstock = stocks.footwear.items.find((stock) => stock.id == query.id);
+            const hstock = stocks.hoddies.items.find((stock) => stock.id == query.id);
             res.json(hstock)
             break;
         default :

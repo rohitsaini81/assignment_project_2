@@ -12,7 +12,7 @@
 <body>
     <div class="itempreview FLEX box-shadow">
         <div class="image">
-            <img id="image" class="box-shadow" src="https://source.unsplash.com/1600x1000/?footwear" alt="Item Image">
+            <img id="image" class="box-shadow" src="" alt="Item Image">
         </div>
         <div class="data P_LEFT">
             <h1 id="name">Item Name</h1>
@@ -50,7 +50,7 @@
             document.getElementById("description").innerText = "Product Details " + data.description;
             document.getElementById("price").innerText = "price " + data.price;
             document.getElementById("stock").innerText = "available stocks " + data.stock;
-            // document.getElementById("image").src = data.image;
+            document.getElementById("image").src = data.image;
             document.getElementById("category").innerText = "category " + data.category;
             document.getElementById("rating").innerText = "rating " + data.rating;
             document.getElementById("reviews").innerText = "reviews " + data.reviews;
