@@ -6,16 +6,19 @@
     <title>Wardrobe Home Page</title>
     <style>
         /* Reset default margin and padding */
+        @import url('https://fonts.googleapis.com/css2?family=Whisper&display=swap');
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         /* Basic styling for the entire page */
         body {
-            @import url('https://fonts.googleapis.com/css2?family=Whisper&display=swap');
-            background-color: #1a1a1a;
+            background: url(./images/bgforhome.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-repeat: no-repeat;
             color: #ffffff;
             text-align: center;
             font-size: large;
@@ -111,14 +114,15 @@
     <nav>
         <ul>
             <li><a href="#">HOME</a></li>
-            <li><a href="#">FOOTWEAR</a></li>
-            <li><a href="../previewCollection.html">HOODIES</a></li>
-            <li><a href="#">JEANS</a></li>
+            <!-- https://source.unsplash.com/1600x1000/?footwear -->
+            <li><a href="./previewCollection.html?footwear">FOOTWEAR</a></li>
+            <li><a href="./previewCollection.html?hoddies">HOODIES</a></li>
+            <li><a href="./previewCollection.html?tshirts">T-SHIRTS</a></li>
             <li><a href="index.html">ADMIN</a></li>
         </ul>
     </nav>
 
-    <img src="logofinal.jpg" alt="Logo" width="150px">
+    <img src="./images/logofinal.jpg" alt="Logo" width="150px">
 
     <header>
         <h1>Dress To Express</h1> <br>

@@ -1,9 +1,10 @@
-const createevent=()=>{
+
+const createevent=(query)=>{
     const item = document.querySelectorAll('.MainContainer .item');
     item.forEach((element)=>{
         element.addEventListener('click',()=>{
             const item_id = element.getAttribute('data-id');
-            window.location.href = `itempreview.html?id=${item_id}`;
+            window.location.href = `itempreview.html?id=${item_id}&type=${query}`;
         })
     })
 }
@@ -36,10 +37,18 @@ const createElement = (imagesrc, alt, heading, p, button, price, dataid) => {
 }
 
 const main = async() => {
+    const url = new URL(window.location.href);
+    const query=url.search.slice(1)
+    console.log(query)
+
+
+    console.log('http://localhost:3000/database?type='+query)
     const container = document.querySelector('.MainContainer');
 
     const data=async()=>{
-     const response=  await fetch('http://localhost:3000/database').then(res=>res.json());
+     const response=  await fetch('http://localhost:3000/database?type='+query).then(res=>res.json());
+     console.log(response)
+
         response.forEach(i => {
             const item = createElement(i.image, i.productname, i.productname, i.description, 'View More', i.price, i.id);
             container.appendChild(item);
@@ -48,8 +57,8 @@ const main = async() => {
     }
    await data();
 
-    createevent();
+    createevent(query);
 }
 
-main();
-// window.onload = main();
+// main();
+window.onload = main();

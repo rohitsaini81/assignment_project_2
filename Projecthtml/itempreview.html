@@ -12,7 +12,7 @@
 <body>
     <div class="itempreview FLEX">
         <div class="image">
-            <img id="image" src="./images/rohit.png" alt="Item Image">
+            <img id="image" src="https://source.unsplash.com/1600x1000/?footwear" alt="Item Image">
         </div>
         <div class="data P_LEFT">
             <h1 id="name">Item Name</h1>
@@ -32,16 +32,21 @@
     </div>
 
     <script>
-
+ 
 
 
         const url = new URL(window.location.href);
-        const item_id = url.toString().split("=")[1];
+        const temp = url.toString().split("=")[1];
+        console.log(temp)
+        const item_id = temp.split("&")[0]
+        const query = url.searchParams.get('type');
         console.log(item_id);
+        console.log(query);
         const get_data = async () => {
-            const response = await fetch(`http://localhost:3000/getstock/${item_id}`);
+            console.log(`http://localhost:3000/getstock/?id=${item_id}&type=${query}`);
+            const response = await fetch(`http://localhost:3000/getstock?id=${item_id}&type=${query}`);
             const data = await response.json();
-            console.log(data);
+            console.log(data)
             // {"id":2,"name":"Item 2","description":"This is item 2","price":15,"image":"https://via.placeholder.com/150","category":"category2","stock":5,"rating":3,"reviews":1,"colors":["yellow","purple","orange"],"sizes":["medium","large"],"comments":[{"user":"user3","comment":"average product","rating":3,"date":"2021-01-03"}]}
             // Printing data
             document.getElementById("name").innerText = data.name;
