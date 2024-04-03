@@ -27,7 +27,8 @@
             <p id="colors">Item Colors</p>
             <p id="sizes">Item Sizes</p>
             <p id="comments">Item Comments</p>
-            <div class="comments">
+            <details class="comments box-shadow" style="padding: 10px; margin-top: 10px;border: 2px solid black;">
+                <summary>Comments</summary>
                 <div class="comment">
                     <p id="user">User: <strong>Abhishek123</strong></p>
                     <p id="comment">Comment: <span>Very nice product</span></p>
@@ -43,8 +44,8 @@
                     <p id="comment">Comment: <span>Very Poor Quality</span></p>
                     <p id="rating">Rating: <span>0.1/5</span></p>
                 </div>
-            </div>
-        </div>
+            </details>
+    </div>
 
         <script>
             const url = new URL(window.location.href);
