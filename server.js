@@ -6,7 +6,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/', (req, res) => {
-    res.redirect("Home.html")
+    res.sendFile("./Home.html")
 });
 app.get('/database', (req, res) => {
     console.log(req.query)

@@ -24,7 +24,23 @@ h2 {
   color: rgba(255, 255, 255, 0.635);
 }
 
+button{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: antiquewhite;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 10px;
 
+}
+button:hover{
+  background-color: black;
+  color: white;
+}
 
 img{
   width: 100%;
@@ -64,4 +80,12 @@ img{
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+.box-shadow{
+
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+.box-shadow:hover{
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
 }
