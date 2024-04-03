@@ -12,6 +12,7 @@ const createevent=(query)=>{
 const createElement = (imagesrc, alt, heading, p, button, price, dataid) => {
     const item = document.createElement('div');
     item.classList.add('item');
+    item.classList.add('box-shadow')
     item.setAttribute('data-id', dataid);
     const item1 = document.createElement('div');
     item1.classList.add('item1');
