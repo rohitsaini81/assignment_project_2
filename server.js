@@ -5,8 +5,13 @@ const cors = require('cors');
 app.use(cors());
 app.use(express.json());
 
+// Serve static files from the "public" directory
+app.use(express.static('public'));
+
+
 app.get('/', (req, res) => {
-    res.sendFile("./Home.html")
+    // res.send("Hello World")
+    res.sendFile(__dirname + '/public/index.html');
 });
 app.get('/database', (req, res) => {
     console.log(req.query)
@@ -48,5 +53,5 @@ app.get('/getstock/', (req, res) => {
 
 });
 app.listen(3000, () => {
-    console.log('Server is running on  https://127.0.0.1:3000');
+    console.log('Server is running on  http://127.0.0.1:3000');
 });

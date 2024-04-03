@@ -27,10 +27,10 @@ To install and run the project, follow these steps:
     ```
 
 ## Usage
-Explain how to use your project and provide any necessary examples or screenshots.
+<!--  -->
 
 ## Contributing
-Specify how others can contribute to your project, if applicable.
+<!--  -->
 
 ## License
-Include information about the license under which your project is distributed.
+<!--  -->
