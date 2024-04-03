@@ -83,7 +83,7 @@ class STOCK_LISTS {
                 name: "Red T-Shirt",
                 description: "This is item 3",
                 price: 20.00,
-                image: "http://127.0.0.1:3000/assets/shirts/red-tshirt.jpeg",
+                image: "http://127.0.0.1:3000/assets/shirts/red-tshirt.webp",
                 category: "03",
                 stock: 20,
                 rating: 5,
@@ -170,7 +170,7 @@ class STOCK_LISTS {
                 productname: "Man's Fashon T Shirt",
                 description: "The Godeln Ultra Cotton T-Shirt",
                 price: 309.0,
-                image: "http://127.0.0.1:3000/assets/shirts/-Dtshirt.webp",
+                image: "http://127.0.0.1:3000/assets/shirts/blackandgreen-Dtshirt.webp",
             },
             {
                 id: 2,
@@ -186,7 +186,7 @@ class STOCK_LISTS {
                 productname: "Red T-Shirt",
                 description: "This is item 3",
                 price: 20.00,
-                image: "http://127.0.0.1:3000/assets/shirts/red-tshirt.jpeg",
+                image: "http://127.0.0.1:3000/assets/shirts/red-tshirt.webp",
             },
             {
                 id: 4,
@@ -214,6 +214,20 @@ class STOCK_LISTS {
                 [
                     {
                         id: 0,
+                        name: "Red Hoddie",
+                        description: "Hoodie in midweight sweatshirt fabric made from a cotton blend with a soft brushed inside. ",
+                        price: 10.00,
+                        image: "http://127.0.0.1:3000/assets/hoddies/redhoddie.jpg",
+                        category: "01",
+                        stock: 10,
+                        rating: 4,
+                        reviews: 2,
+                        colors: ["red", "blue", "green"],
+                        sizes: ["small", "medium", "large"]
+
+                    },
+                    {
+                        id: 1,
                         name: "Red Hoddie",
                         description: "Hoodie in midweight sweatshirt fabric made from a cotton blend with a soft brushed inside. ",
                         price: 10.00,
@@ -259,6 +273,14 @@ class STOCK_LISTS {
                 ],
             stock: [
                 {
+                    id: 0,
+                    stock: 25,
+                    productname: "Red Hoddie",
+                    description: "Hoodie in midweight sweatshirt",
+                    price: 19.9,
+                    image: "http://127.0.0.1:3000/assets/hoddies/redhoddie.jpg",
+                },
+                {
                     id: 1,
                     stock: 25,
                     productname: "Red Hoddie",
@@ -288,6 +310,19 @@ class STOCK_LISTS {
             items:
                 [
                     {
+                        id: 0,
+                        name: "Blue Knit Sneakers",
+                        description: "This product is eligible for return or exchange under our 30-day return or exchange policy. No questions asked. ",
+                        price: 10.00,
+                        image: "http://127.0.0.1:3000/assets/shoes/blue-knit-sneaker.webp",
+                        category: "01",
+                        stock: 10,
+                        rating: 4,
+                        reviews: 2,
+                        colors: ["red", "blue", "green"],
+                        sizes: ["small", "medium", "large"]
+                      },
+                    {
                         id: 1,
                         name: "Blue Knit Sneakers",
                         description: "This product is eligible for return or exchange under our 30-day return or exchange policy. No questions asked. ",
@@ -299,8 +334,8 @@ class STOCK_LISTS {
                         reviews: 2,
                         colors: ["red", "blue", "green"],
                         sizes: ["small", "medium", "large"]
-
-                      },{
+                      },
+                      {
                         id: 2,
                         name: "Red Football Sneakers",
                         description: "This product is eligible for return or exchange under our 30-day return or exchange policy. No questions asked. ",
@@ -330,6 +365,14 @@ class STOCK_LISTS {
 
                 ],
             stock:[
+                {
+                    id: 0,
+                    stock: 25,
+                    productname: "Blue Knit Sneaker",
+                    description: "Fancy footwear with a twist! Inspired by real ballet dancers' footwear,",
+                    price: 19.9,
+                    image: "http://127.0.0.1:3000/assets/shoes/blue-knit-sneaker.webp",
+                },
                 {
                     id: 1,
                     stock: 25,
