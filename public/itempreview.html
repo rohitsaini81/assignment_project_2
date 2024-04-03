@@ -27,42 +27,57 @@
             <p id="colors">Item Colors</p>
             <p id="sizes">Item Sizes</p>
             <p id="comments">Item Comments</p>
-            <p id="date">Item Date</p>
+            <div class="comments">
+                <div class="comment">
+                    <p id="user">User: <strong>Abhishek123</strong></p>
+                    <p id="comment">Comment: <span>Very nice product</span></p>
+                    <p id="rating">Rating: <span>4.4/5</span></p>
+                </div>
+                <div class="comment">
+                    <p id="user">User: <strong>Sawankumar32</strong></p>
+                    <p id="comment">Comment: <span>Awesome</span></p>
+                    <p id="rating">Rating: <span>5/5</span></p>
+                </div>
+                <div class="comment">
+                    <p id="user">User: <strong>Rohit Saini</strong></p>
+                    <p id="comment">Comment: <span>Very Poor Quality</span></p>
+                    <p id="rating">Rating: <span>0.1/5</span></p>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <script>
-        const url = new URL(window.location.href);
-        const temp = url.toString().split("=")[1];
-        console.log(temp)
-        const item_id = temp.split("&")[0]
-        const query = url.searchParams.get('type');
-        console.log(item_id);
-        console.log(query);
-        const get_data = async () => {
-            console.log(`http://localhost:3000/getstock/?id=${item_id}&type=${query}`);
-            const response = await fetch(`http://localhost:3000/getstock?id=${item_id}&type=${query}`);
-            const data = await response.json();
-            console.log(data)
-            // {"id":2,"name":"Item 2","description":"This is item 2","price":15,"image":"https://via.placeholder.com/150","category":"category2","stock":5,"rating":3,"reviews":1,"colors":["yellow","purple","orange"],"sizes":["medium","large"],"comments":[{"user":"user3","comment":"average product","rating":3,"date":"2021-01-03"}]}
-            // Printing data
-            document.getElementById("name").innerText = data.name;
-            document.getElementById("description").innerText = "Product Details " + data.description;
-            document.getElementById("price").innerText = "price " + data.price;
-            document.getElementById("stock").innerText = "available stocks " + data.stock;
-            document.getElementById("image").src = data.image;
-            document.getElementById("category").innerText = "category " + data.category;
-            document.getElementById("rating").innerText = "rating " + data.rating;
-            document.getElementById("reviews").innerText = "reviews " + data.reviews;
-            document.getElementById("colors").innerText = "available color " + data.colors;
-            document.getElementById("sizes").innerText = "available sizes " + data.sizes;
-            document.getElementById("comments").innerText = data.comments;
-            document.getElementById("date").innerText = data.date;
+        <script>
+            const url = new URL(window.location.href);
+            const temp = url.toString().split("=")[1];
+            console.log(temp)
+            const item_id = temp.split("&")[0]
+            const query = url.searchParams.get('type');
+            console.log(item_id);
+            console.log(query);
+            const get_data = async () => {
+                console.log(`http://localhost:3000/getstock/?id=${item_id}&type=${query}`);
+                const response = await fetch(`http://localhost:3000/getstock?id=${item_id}&type=${query}`);
+                const data = await response.json();
+                console.log(data)
+                // {"id":2,"name":"Item 2","description":"This is item 2","price":15,"image":"https://via.placeholder.com/150","category":"category2","stock":5,"rating":3,"reviews":1,"colors":["yellow","purple","orange"],"sizes":["medium","large"],"comments":[{"user":"user3","comment":"average product","rating":3,"date":"2021-01-03"}]}
+                // Printing data
+                document.getElementById("name").innerText = data.name;
+                document.getElementById("description").innerText = "Product Details: " + data.description;
+                document.getElementById("price").innerText = "price: $" + data.price;
+                document.getElementById("stock").innerText = "available stocks: " + data.stock;
+                document.getElementById("image").src = data.image;
+                document.getElementById("category").innerText = "category: " + data.category;
+                document.getElementById("rating").innerText = "rating: " + data.rating;
+                document.getElementById("reviews").innerText = "reviews: " + data.reviews;
+                document.getElementById("colors").innerText = "available color: " + data.colors;
+                // document.getElementById("sizes").innerText = "available sizes: " + data.sizes;
+                // document.getElementById("comments").innerText = data.comments;
 
-        }
 
-        get_data();
-    </script>
+            }
+
+            get_data();
+        </script>
 </body>
 
 </html>
