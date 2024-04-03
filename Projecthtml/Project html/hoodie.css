@@ -1,0 +1,19 @@
+.card{
+    width: 270px;
+    margin: 10px auto;
+    border: 1px solid lightgray;
+    border-radius: 14px;
+    padding: 10px;
+}
+.card-img{
+    width: 100%;
+    border-radius: 14px;
+}
+.card-header{
+    position: relative;
+}
+
+.card{
+    display:flex;
+    flex-wrap: wrap;
+}

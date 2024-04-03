@@ -1,0 +1,66 @@
+.FLEX_WRAP li {
+    margin: 10px;
+    list-style: none;
+    height: 400px;
+    width: 200px;
+    border: aqua 3px solid;
+}
+
+.image>img {
+    width: 40vw;
+    height: 80vh;
+    margin: 0 15px;
+    object-fit: contain;
+}
+
+.P_LEFT {
+    padding: 0 0 0 15px;
+}
+
+.P_RIGHT {
+    padding: 0 0 15px 0;
+}
+
+.list {
+    padding: 0 0 0 15px;
+}
+
+.items {
+    padding: 0 11px;
+    height: 20em;
+    width: 15em;
+    border: 2px solid black;
+}
+
+.container {
+    height: 50vh;
+    width: 100vw;
+    margin: 10px 0;
+    object-fit: contain;
+}
+
+.box1 {
+    height: 100vh;
+    width: 25vw;
+    background-color: rgba(192, 153, 70, 0.808);
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin-top: 40px;
+
+}
+
+.box2 {
+    height: 100%;
+    width: 75vw;
+    /* background-color: rgba(151, 151, 151, 0.897); */
+    background: url("../images/background.jpg");
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.item-image {
+    height: 400px;
+    width: 300px;
+}

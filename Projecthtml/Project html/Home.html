@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wardrobe Home Page</title>
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Basic styling for the entire page */
+        body {
+            @import url('https://fonts.googleapis.com/css2?family=Whisper&display=swap');
+            background-color: #1a1a1a;
+            color: #ffffff;
+            text-align: center;
+            font-size: large;
+        }
+
+        /* Header styles */
+        header {
+            background-image: url(bgforhome.jpg);
+            padding: 180px;
+            font-size: 15px;
+            margin-bottom: 5px;
+            padding-bottom: 180px;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+
+        }
+
+        img {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+        }
+
+        h1 {
+            font-size: 50px;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+            text-shadow: #ffffff 1px 1px;
+            }
+
+        /* Subheading styles */
+        .subheading {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        /* Button styles */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #e0b715;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* Navigation menu styles */
+        nav {
+            position: fixed;
+            top: 60px;
+            right: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+            text-decoration: none;
+            text-shadow: #ffffff 1px 1px;
+        }
+        nav ul li a{
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            font-weight: bolder;
+            background-color: #fcfcfccc;
+        }
+
+
+        /* Three-step process section */
+        .steps {
+            margin-top: 50px;
+            position: relative;
+            display: inline-flex;
+            justify-content: center;
+            
+        }
+
+        .step1 , .step2 , .step3 {
+            margin-bottom: 20px;
+            position:relative;
+            max-width:30%;
+            padding:0px 70px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">FOOTWEAR</a></li>
+            <li><a href="../previewCollection.html">HOODIES</a></li>
+            <li><a href="#">JEANS</a></li>
+            <li><a href="index.html">ADMIN</a></li>
+        </ul>
+    </nav>
+
+    <img src="logofinal.jpg" alt="Logo" width="150px">
+
+    <header>
+        <h1>Dress To Express</h1> <br>
+        <p style="font-size: 20px"; class="subheading"> We Help You To Enhance Your Beauty With Perfect Outfit </style> </p> <br>
+        <a href="#" class="btn">ENQUIRY</a>
+        <a href="#" class="btn">CONTACT US</a>
+    </header>
+
+    <div class="steps">
+        <div class="step1">
+            <p>Discover fresh styles & quality pieces you'll love..</p>
+        </div>
+        <div class="step2">
+            <p>Where your unique style finds its perfect fit..</p>
+        </div>
+        <div class="step3">
+            <p>Wardrobe Clothing offers effortless style & free shipping on all orders..</p>
+        </div>
+    </div>
+</body>
+</html>

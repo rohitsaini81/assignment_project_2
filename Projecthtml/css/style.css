@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+p{
+  font-size: 1.2rem;
+  color: black;
+}
+body {
+  font-family: system-ui, 'Segoe UI','Open Sans', 'Helvetica Neue', sans-serif;
+  width: 100vw;
+  overflow-x: hidden;
+  height: 100%;
+  padding: 5px;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+h2 {
+  color: rgba(255, 255, 255, 0.635);
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(logobg.jpg);
+  padding: 20px;
+  position: relative;
+
+}
+
+.logindiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 72vh;
+  background-image: url(bgf.jpg);
+  background-size: 100% 100%;
+}
+
+#username,
+#pass {
+  margin-top: 3px;
+  width: 300px;
+  height: 35px;
+  border-radius: 4px;
+  background-color: rgba(225, 223, 221, 0.441);
+  border: none;
+}
+
+button {
+  margin-top: 40px;
+  padding: 10px 30px;
+  border-radius: 20px;
+  border: none;
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 17, 0, 0.795);
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+}
+
+.checkbox {
+  display: inline-block;
+  padding-left: 28px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.bg {
+  background-image: url(clothbg.jpg);
+}
+
+.logintext {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+
+img{
+  width: 100%;
+  height: 100%;
+}
+/* next */
+.FLEX {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.FEX-C{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.FLEX_WRAP {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-wrap: wrap;
+  
+}
+.scroll{
+  overflow: auto;
+  /* height: 50vh; */
+}
+.content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+}
+.FLEX_C{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

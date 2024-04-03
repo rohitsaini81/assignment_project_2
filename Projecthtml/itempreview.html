@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PREVIEW</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/items.css">
+</head>
+
+<body>
+    <div class="itempreview FLEX">
+        <div class="image">
+            <img id="image" src="./images/rohit.png" alt="Item Image">
+        </div>
+        <div class="data P_LEFT">
+            <h1 id="name">Item Name</h1>
+            <p id="description">Item Description</p>
+            <p id="price">Item Price</p>
+            <p id="stock">Item Stock</p>
+            <button id="buy">Buy</button>
+            <button id="add_to_cart">Add to Cart</button>
+            <p id="category">Item Category</p>
+            <p id="rating">Item Rating</p>
+            <p id="reviews">Item Reviews</p>
+            <p id="colors">Item Colors</p>
+            <p id="sizes">Item Sizes</p>
+            <p id="comments">Item Comments</p>
+            <p id="date">Item Date</p>
+        </div>
+    </div>
+
+    <script>
+
+
+
+        const url = new URL(window.location.href);
+        const item_id = url.toString().split("=")[1];
+        console.log(item_id);
+        const get_data = async () => {
+            const response = await fetch(`http://localhost:3000/getstock/${item_id}`);
+            const data = await response.json();
+            console.log(data);
+            // {"id":2,"name":"Item 2","description":"This is item 2","price":15,"image":"https://via.placeholder.com/150","category":"category2","stock":5,"rating":3,"reviews":1,"colors":["yellow","purple","orange"],"sizes":["medium","large"],"comments":[{"user":"user3","comment":"average product","rating":3,"date":"2021-01-03"}]}
+            // Printing data
+            document.getElementById("name").innerText = data.name;
+            document.getElementById("description").innerText = "Product Details " + data.description;
+            document.getElementById("price").innerText = "price " + data.price;
+            document.getElementById("stock").innerText = "available stocks " + data.stock;
+            // document.getElementById("image").src = data.image;
+            document.getElementById("category").innerText = "category " + data.category;
+            document.getElementById("rating").innerText = "rating " + data.rating;
+            document.getElementById("reviews").innerText = "reviews " + data.reviews;
+            document.getElementById("colors").innerText = "available color " + data.colors;
+            document.getElementById("sizes").innerText = "available sizes " + data.sizes;
+            document.getElementById("comments").innerText = data.comments;
+            document.getElementById("date").innerText = data.date;
+
+        }
+
+        get_data();
+    </script>
+</body>
+
+</html>
