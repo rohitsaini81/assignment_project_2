@@ -3,10 +3,10 @@ class STOCK_LISTS {
         items: [
             {
                 id: 0,
-                name: "Item 0",
-                description: "This is item 0",
+                name: "Black T-Shirt",
+                description: "Black T-Shirt only for man's",
                 price: 10.00,
-                image: "https://source.unsplash.com/1600x1000/?t-shirt",
+                image: "http://127.0.0.1:3000/assets/shirts/black-tshirt.webp",
                 category: "01",
                 stock: 10,
                 rating: 4,
@@ -34,7 +34,7 @@ class STOCK_LISTS {
                 name: "Item 1",
                 description: "This is item 1",
                 price: 10.00,
-                image: "https://source.unsplash.com/1600x1000/?t-shirts",
+                image: "http://127.0.0.1:3000/assets/shirts/-Dtshirt.webp",
                 category: "01",
                 stock: 10,
                 rating: 4,
@@ -158,10 +158,10 @@ class STOCK_LISTS {
             {
                 id: 0,
                 stock: 0,
-                productname: "Item 0",
+                productname: "Black T-Shirt",
                 description: "This is item 0",
                 price: 20.5,
-                image: "https://source.unsplash.com/1600x1000/?t-shirts",
+                image: "http://127.0.0.1:3000/assets/shirts/black-tshirt.webp",
 
             },
             {
@@ -170,7 +170,7 @@ class STOCK_LISTS {
                 productname: "Man's Fashon T Shirt",
                 description: "The Godeln Ultra Cotton T-Shirt",
                 price: 309.0,
-                image: "https://source.unsplash.com/1600x1000/?t-shirts",
+                image: "http://127.0.0.1:3000/assets/shirts/-Dtshirt.webp",
             },
             {
                 id: 2,
