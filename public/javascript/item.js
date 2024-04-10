@@ -41,7 +41,7 @@ const main = async() => {
     // cart printing
         console.log("hii--")
         const cart_printbtn= document.getElementById("cartCount")
-        const resp = await fetch(`http://localhost:3000/addtocart`).then((res)=>res.json())
+        const resp = await fetch(`http://localhost:3000/cart`).then((res)=>res.json())
         const cars=resp.length;
         cart_printbtn.innerText=cars;
         console.log("cart ",cars)
