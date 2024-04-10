@@ -7,6 +7,12 @@
     <title>Cart</title>
     <!-- <link rel="stylesheet" href="./css/styles.css"> -->
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         button {
             cursor: pointer;
             border: none;
@@ -25,7 +31,8 @@
             background-color: black;
             color: white;
         }
-        .FLEX_C{
+
+        .FLEX_C {
             display: flex;
             flex-direction: column;
         }
@@ -45,7 +52,7 @@
             <h2 color="red">Total: <span id="total_items"></span></h2>
             <p id="total-price">Price: <span id="price_total">55$</span></p>
         </div>
-        <div id="cart-items" class="FLEX">
+        <div id="cart-items" class="FLEX-C">
             <!-- <div class="items">
                 <h2>Item Name</h2>
                 <p>Price</p>
@@ -54,7 +61,7 @@
         </div>
     </div>
     <script>
-      
+
     </script>
     <script src="./javascript/cart.js"></script>
 </body>

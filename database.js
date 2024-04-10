@@ -1,5 +1,5 @@
 class STOCK_LISTS {
-    cart_items = [{type:"shirts",name:"Black T-Shirt",id:0,price:5},{type:"shirts",name:"White T-Shirt For Men",id:1,price:99}]
+    cart_items = [{type:"shirts",name:"Black T-Shirt",id:0,price:5,img:"http://127.0.0.1:3000/assets/shirts/black-tshirt.jpg"},{type:"shirts",name:"White T-Shirt For Men",id:1,price:99,img:"http://127 .0.0.1:3000/assets/shirts/white-tshirt.jpg"}]
     shirts = {
         items: [
             {

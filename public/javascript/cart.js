@@ -25,11 +25,11 @@ const main = async () => {
     price.innerHTML =total_prices+' $';
     data.forEach(item => {
         const div = document.createElement('div');
-        // <img src="${item.image}" alt="Item Image">
         console.log(item);
         div.classList.add('items');
+        // <img src="${item.img}" alt="Item Image">
         div.innerHTML = `
-            <h2>${item.name}</h2>
+        <h2>${item.name}</h2>
             <p>${item.price}$</p>
             <button onclick="removeItem(${item.id})">Remove</button>
         `;
