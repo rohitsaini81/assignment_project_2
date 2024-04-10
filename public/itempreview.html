@@ -7,9 +7,47 @@
     <title>PREVIEW</title>
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/items.css">
+    <script src="./javascript/cart.js"></script>
 </head>
 
-<body>
+<body onload="updateCartCount()">
+    <style>
+        .sticky {
+            height: 60px;
+            background-color: rgba(0, 0, 0, 0.938);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            color: white;
+        }
+
+        .cart {
+            position: absolute;
+            top: 1%;
+            right: 1%;
+            height: 50px;
+            width: auto;
+        }
+
+        .nav {
+            margin-right: 25px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav:hover {
+            color: yellow;
+            cursor: pointer;
+
+        }
+    </style>
+    <nav class="sticky">
+        <a class="nav" href="Home.html">Home</a>
+        <a class="nav" onclick="history.back()">Back</a>
+        <div class="cart"><a href="cart.html"><img src="assets/cart-icon.jpg"></a></div>
+        <div class="cartno"><span id="cartCount">0</span></div>
+    </nav>
     <div class="itempreview FLEX box-shadow">
         <div class="image">
             <img id="image" class="box-shadow" src="" alt="Item Image">
@@ -20,7 +58,7 @@
             <p id="price">Item Price</p>
             <p id="stock">Item Stock</p>
             <button id="buy">Buy</button>
-            <button id="add_to_cart">Add to Cart</button>
+            <button type="submit" id="add_to_cart">Add to Cart</button>
             <p id="category">Item Category</p>
             <p id="rating">Item Rating</p>
             <p id="reviews">Item Reviews</p>
@@ -45,9 +83,18 @@
                     <p id="rating">Rating: <span>0.1/5</span></p>
                 </div>
             </details>
-    </div>
+        </div>
 
         <script>
+            const cart_button= document.getElementById('add_to_cart')
+            const cart_printbtn= document.getElementById("cartCount")
+            cart_button.addEventListener('click',async()=>{
+                
+                console.log("added to cart")
+                const response = await fetch(`http://localhost:3000/addtocart?id=${item_id}&type=${query}`).then((res)=>res.json())
+                const cars=response.length;
+                cart_printbtn.innerText=cars;
+            })
             const url = new URL(window.location.href);
             const temp = url.toString().split("=")[1];
             console.log(temp)
@@ -56,6 +103,12 @@
             console.log(item_id);
             console.log(query);
             const get_data = async () => {
+                // cart printing
+                const respons = await fetch(`http://localhost:3000/addtocart?id=${item_id}&type=${query}`).then((res)=>res.json())
+                const cars=respons.length;
+                cart_printbtn.innerText=cars;
+
+                // next
                 console.log(`http://localhost:3000/getstock/?id=${item_id}&type=${query}`);
                 const response = await fetch(`http://localhost:3000/getstock?id=${item_id}&type=${query}`);
                 const data = await response.json();
@@ -64,7 +117,7 @@
                 // Printing data
                 document.getElementById("name").innerText = data.name;
                 document.getElementById("description").innerText = "Product Details: " + data.description;
-                document.getElementById("price").innerText = "price: $" + data.price;
+                document.getElementById("price").innerText = "price: ₹ " + data.price;
                 document.getElementById("stock").innerText = "available stocks: " + data.stock;
                 document.getElementById("image").src = data.image;
                 document.getElementById("category").innerText = "category: " + data.category;

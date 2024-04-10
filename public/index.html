@@ -10,10 +10,10 @@
 
 <body>
   <div class="logo">
-    <img src="./images/logofinal.jpg" alt="logo" width="150px" height="150px">
+    <img src="http://127.0.0.1:3000/images/logofinal.jpg" alt="logo" width="150px" height="150px">
   </div>
   <div class="logindiv">
-    <form class="login" action="Home.html">
+    <form class="login" action="Home.html" onsubmit="return validateCredentials();">
       <div class="logintext">
         <h1>Login</h1>
       </div>
@@ -30,6 +30,29 @@
       </div>
     </form>
   </div>
+  <script>
+    const credentials = [
+      { username: "Wardrobe", password: "Priyanka" },
+      { username: "Priyanka", password: "Priyanka123" },
+      { username: "Anshika", password: "Anshika123" },
+    ];
+
+    function validateCredentials() {
+      const inputUsername = document.getElementById("username").value;
+      const inputPassword = document.getElementById("pass").value;
+
+      const foundCredential = credentials.find(
+        (cred) => cred.username === inputUsername && cred.password === inputPassword
+      );
+
+      if (foundCredential) {
+        return true; // Form validation successful, allow submission
+      } else {
+        alert("Invalid username or password");
+        return false; // Form validation failed, prevent submission
+      }
+    }
+  </script>
 </body>
 
 </html>

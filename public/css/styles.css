@@ -17,7 +17,7 @@ body {
 }
 
 .container {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
 }
 h2 {
@@ -63,13 +63,14 @@ img{
   /* justify-content: center; */
   align-items: center;
   flex-wrap: wrap;
+  gap: 20px;
   
 }
 .scroll{
   overflow: auto;
-  /* height: 50vh; */
+ /* height: 50vh; */
 }
-.content{
+.content{ 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,4 +89,24 @@ img{
 .box-shadow:hover{
   cursor: pointer;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+}
+.product-card {
+  flex: 0 0 calc(50% - 20px); /* Set width for 5 items with gaps */
+}
+
+.cart , .cartno {
+  position:absolute;
+  top: 3%;
+  right: 20px;
+  height:50px;
+  width:auto;
+}
+
+.cartno{
+  top: 2px;
+  right: 20px;
+}
+
+.sticky{
+  height: 55px;
 }

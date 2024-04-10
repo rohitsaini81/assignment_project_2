@@ -12,6 +12,16 @@ app.use(express.static('public'));
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
+app.get('/addtocart',(req, res)=>{
+    stocks.cart_items
+    console.log(req.body.query)
+    res.send(stocks.cart_items)
+})
+app.post('/addtocart',(req, res)=>{
+    stocks.cart_items
+    console.log(req.body.query)
+    res.send(stocks.cart_items)
+})
 app.get('/database', (req, res) => {
     console.log(req.query)
     switch(req.query.type){

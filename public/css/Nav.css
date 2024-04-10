@@ -28,3 +28,9 @@
 .sticky ul li a:hover {
     color: yellow;
 }
+
+.cartno{
+    color: whitesmoke;
+    top: 5px;
+    right: 25px;
+  }

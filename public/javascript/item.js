@@ -24,7 +24,7 @@ const createElement = (imagesrc, alt, heading, p, button, price, dataid) => {
     const pElement = document.createElement('p');
     pElement.textContent = p;
     const priceElement = document.createElement('p');
-    priceElement.textContent = 'Price: $' + price;
+    priceElement.textContent = 'Price: ₹' + price;
     const buttonElement = document.createElement('button');
     buttonElement.textContent = button;
     item1.appendChild(img);
@@ -38,6 +38,18 @@ const createElement = (imagesrc, alt, heading, p, button, price, dataid) => {
 }
 
 const main = async() => {
+    // cart printing
+        console.log("hii--")
+        const cart_printbtn= document.getElementById("cartCount")
+        const resp = await fetch(`http://localhost:3000/addtocart`).then((res)=>res.json())
+        const cars=resp.length;
+        cart_printbtn.innerText=cars;
+        console.log("cart ",cars)
+        // next
+
+
+
+
     const url = new URL(window.location.href);
     const query=url.search.slice(1)
     console.log(query)
@@ -62,4 +74,17 @@ const main = async() => {
 }
 
 // main();
-window.onload = main();
+document.onload = main();
+
+function addToCart() {
+    let cartCount = parseInt(localStorage.getItem("cartCount")) || 0;
+    cartCount++;
+    localStorage.setItem("cartCount", cartCount);
+    updateCartCount();
+  }
+  
+  function updateCartCount() {
+    const cartCount = localStorage.getItem("cartCount");
+    document.getElementById("cartCount").innerHTML = cartCount;
+    document.getElementById("cartcount").innerHTML = cartCount; // Update this line to match the id of the span element in the second HTML file
+  }
