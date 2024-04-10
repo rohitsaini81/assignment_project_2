@@ -1,5 +1,5 @@
 class STOCK_LISTS {
-    cart_items = [{type:"shirts",id:0},{type:"shirts",id:1}]
+    cart_items = [{type:"shirts",name:"Black T-Shirt",id:0,price:5},{type:"shirts",name:"White T-Shirt For Men",id:1,price:99}]
     shirts = {
         items: [
             {

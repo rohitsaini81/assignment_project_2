@@ -86,14 +86,25 @@
         </div>
 
         <script>
-            const cart_button= document.getElementById('add_to_cart')
-            const cart_printbtn= document.getElementById("cartCount")
-            cart_button.addEventListener('click',async()=>{
+            const cart_button = document.getElementById('add_to_cart')
+            const cart_printbtn = document.getElementById("cartCount")
+            cart_button.addEventListener('click', async () => {
+                const resp = await fetch(
+                    `http://localhost:3000/addtocart`,
+                    {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            id: item_id,
+                            type: query
+                        }),
+                    }
+                ).then((res) => res.json())
+                console.log(resp)
+                cart_printbtn.innerText = resp.length;
                 
-                console.log("added to cart")
-                const response = await fetch(`http://localhost:3000/addtocart?id=${item_id}&type=${query}`).then((res)=>res.json())
-                const cars=response.length;
-                cart_printbtn.innerText=cars;
             })
             const url = new URL(window.location.href);
             const temp = url.toString().split("=")[1];
@@ -104,9 +115,9 @@
             console.log(query);
             const get_data = async () => {
                 // cart printing
-                const respons = await fetch(`http://localhost:3000/addtocart?id=${item_id}&type=${query}`).then((res)=>res.json())
-                const cars=respons.length;
-                cart_printbtn.innerText=cars;
+                const respons = await fetch(`http://localhost:3000/cart?id=${item_id}&type=${query}`).then((res) => res.json())
+                const cars = respons.length;
+                cart_printbtn.innerText = cars;
 
                 // next
                 console.log(`http://localhost:3000/getstock/?id=${item_id}&type=${query}`);
