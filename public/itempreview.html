@@ -88,6 +88,7 @@
         <script>
             const cart_button = document.getElementById('add_to_cart')
             const cart_printbtn = document.getElementById("cartCount")
+            var main_data={}
             cart_button.addEventListener('click', async () => {
                 const resp = await fetch(
                     `http://localhost:3000/addtocart`,
@@ -98,7 +99,9 @@
                         },
                         body: JSON.stringify({
                             id: item_id,
-                            type: query
+                            type: query,
+                            name: document.getElementById("name").innerText,
+                            price: main_data.price,
                         }),
                     }
                 ).then((res) => res.json())
@@ -124,6 +127,7 @@
                 const response = await fetch(`http://localhost:3000/getstock?id=${item_id}&type=${query}`);
                 const data = await response.json();
                 console.log(data)
+                main_data=data;
                 // {"id":2,"name":"Item 2","description":"This is item 2","price":15,"image":"https://via.placeholder.com/150","category":"category2","stock":5,"rating":3,"reviews":1,"colors":["yellow","purple","orange"],"sizes":["medium","large"],"comments":[{"user":"user3","comment":"average product","rating":3,"date":"2021-01-03"}]}
                 // Printing data
                 document.getElementById("name").innerText = data.name;

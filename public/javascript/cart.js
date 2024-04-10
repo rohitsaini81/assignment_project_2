@@ -1,63 +1,49 @@
-// let cartItems = [];
-
-// function addToCart(product) {
-//   cartItems.push(product);
-//   updateCartCount();
-//   displayCartItems();
-// }
-
-// function displayCartItems() {
-//   const cartItemsContainer = document.getElementById("cart-items");
-//   cartItemsContainer.innerHTML = "";
-
-//   cartItems.forEach((item) => {
-//     const cartItemDiv = document.createElement("div");
-//     cartItemDiv.classList.add("cart-item");
-
-//     const cartItemImage = document.createElement("img");
-//     cartItemImage.src = item.image;
-//     cartItemImage.alt = item.name;
-//     cartItemDiv.appendChild(cartItemImage);
-
-//     const cartItemDetails = document.createElement("div");
-//     cartItemDetails.classList.add("cart-item-details");
-
-//     const cartItemName = document.createElement("h3");
-//     cartItemName.textContent = item.name;
-//     cartItemDetails.appendChild(cartItemName);
-
-//     const cartItemPrice = document.createElement("p");
-//     cartItemPrice.textContent = "Price: ₹ " + item.price;
-//     cartItemDetails.appendChild(cartItemPrice);
-
-//     const cartItemRemove = document.createElement("button");
-//     cartItemRemove.textContent = "Remove";
-//     cartItemRemove.addEventListener("click", () => {
-//       removeFromCart(item.id);
-//     });
-//     cartItemDetails.appendChild(cartItemRemove);
-
-//     cartItemDiv.appendChild(cartItemDetails);
-//     cartItemsContainer.appendChild(cartItemDiv);
-//   });
-
-//   updateTotalPrice();
-// }
-
-// function removeFromCart(productId) {
-//   cartItems = cartItems.filter((item) => item.id !== productId);
-//   displayCartItems();
-// }
-
-// function updateTotalPrice() {
-//   const totalPriceElement = document.getElementById("total-price");
-//   const totalPrice = cartItems.reduce((total, item) => total + item.price, 0);
-//   totalPriceElement.textContent = "₹ " + totalPrice;
-// }
-
-// function updateCartCount() {
-//   const cartCountElement = document.getElementById("cartCount");
-//   cartCountElement.textContent = cartItems.length;
-// }
-
-// displayCartItems();
+const cart = document.getElementById('cart-items');
+const total = document.getElementById('total_items');
+const price = document.getElementById('price_total');
+const clear = document.getElementById('clear-cart');
+clear.addEventListener('click', async () => {
+    const response = await fetch('http://localhost:3000/clearcart', {
+        method: 'DELETE'
+    });
+    const data = await response.json();
+    console.log(data);
+    cart.innerHTML = '';
+    total.innerHTML = 0;
+    price.innerHTML = '0$';
+});
+const main = async () => {
+    const response = await fetch('http://localhost:3000/cart');
+    const data = await response.json();
+    console.log(data);
+    total.innerHTML = data.length;
+    let total_prices = 0;
+    
+  await  data.forEach(value => {
+        total_prices += value.price
+    });
+    price.innerHTML =total_prices+' $';
+    data.forEach(item => {
+        const div = document.createElement('div');
+        // <img src="${item.image}" alt="Item Image">
+        console.log(item);
+        div.classList.add('items');
+        div.innerHTML = `
+            <h2>${item.name}</h2>
+            <p>${item.price}$</p>
+            <button onclick="removeItem(${item.id})">Remove</button>
+        `;
+        cart.appendChild(div);
+    });
+    removeItem = async (id) => {
+        const response = await fetch(`http://localhost:3000/deletefromcart/${id}`, {
+            method: 'DELETE'
+        });
+        const data = await response.json();
+        console.log(data);
+        cart.innerHTML = '';
+        main();
+    }
+}
+main()
+// document.addEventListener('DOMContentLoaded', main);
